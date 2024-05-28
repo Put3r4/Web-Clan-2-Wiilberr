@@ -190,32 +190,49 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="bg-light py-5">
+    <section id="testimoni" class="testimoni d-flex align-items-center">
         <div class="container">
-            <h2 class="text-center">Testimonials</h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="blockquote-footer">Customer Name in <cite title="Source Title">Company Name</cite></footer>
-                    </blockquote>
+          <div class="row align-items-center">
+            <div class="col-md-6 testi-img">
+              <div class="img-box">
+                <div class="circle"></div>
+                <div class="img-box-inner">
+                  <img src="./assets/images/testimonial/1.png" alt="testi img">
                 </div>
-                <div class="col-lg-4">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="blockquote-footer">Customer Name in <cite title="Source Title">Company Name</cite></footer>
-                    </blockquote>
-                </div>
-                <div class="col-lg-4">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        <footer class="blockquote-footer">Customer Name in <cite title="Source Title">Company Name</cite></footer>
-                    </blockquote>
-                </div>
-                <!-- Add more testimonials as needed -->
+              </div>
             </div>
+            <div class="col-md-6">
+              <div id="myCarousel" class="carousel slide" data-bs-interval="5000" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item testi-item active" data-img="assets/images/testimonial/1.png">
+                    <h1 class="fw-bold">KESAN DARI PARA PENGGUNA LAYANAN KAMI</h1>
+                    <p>“Layanan pengiriman ini sangat profesional. Saya merasa aman mengirim barang berharga melalui mereka, dan mereka selalu memberikan pembaruan yang akurat tentang status pengiriman.”</p>
+                    <h3>Amber - <span>aktris</span></h3>
+                  </div>
+                  <div class="carousel-item testi-item" data-img="assets/images/testimonial/2.png">
+                    <h1 class="fw-bold">KESAN DARI PARA PENGGUNA LAYANAN KAMI</h1>
+                    <p>“Saya telah menggunakan layanan pengiriman ini selama bertahun-tahun, dan mereka selalu memberikan pelayanan yang luar biasa. Pengiriman tepat waktu, staf yang ramah, dan harga yang wajar.”</p>
+                    <h3>Khan - <span>pekerja kantoran</span></h3>
+                  </div>
+                  <div class="carousel-item testi-item" data-img="assets/images/testimonial/3.png">
+                    <h1 class="fw-bold">KESAN DARI PARA PENGGUNA LAYANAN KAMI</h1>
+                    <p>“Layanan pengiriman ini sangat membantu bisnis saya. Mereka selalu mengutamakan keamanan dan keandalan dalam mengirimkan produk kami ke pelanggan.”</p>
+                    <h3>john - <span>pengusaha</span></h3>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                  <img src="./assets/images/testimonial/left-arrow.png" alt="prev">
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                  <img src="./assets/images/testimonial/right-arrow.png" alt="prev">
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">
@@ -250,5 +267,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+    <script>
+        const myCarousel = document.getElementById('myCarousel')
+        myCarousel.addEventListener('slid.bs.carousel', function () {
+          const activeItem = this.querySelector(".active");
+          document.querySelector(".testi-img img").src = activeItem.getAttribute("data-img");
+          document.querySelector(".testi-img .circle").style.backgroundColor = activeItem.getAttribute("data-color");
+        })
+      </script>
 </body>
 </html>
