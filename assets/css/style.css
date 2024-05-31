@@ -5,7 +5,7 @@ html { scroll-behavior: smooth; }
   --primary-color: #007bff; /* Warna utama (misalnya biru) */
   --secondary-color: #F3F0E5; /* Warna sekunder (misalnya abu-abu) */
   --background-color:  #D9D9D9; /* Warna latar belakang */
-  --text-color: #212529; /* Warna teks utama */
+  --text-color: #12294E; /* Warna teks utama */
 }
 
 /* Global styles */
@@ -17,36 +17,14 @@ body {
   padding: 0;
   line-height: 1.6;
 }
-.navbar {
-  padding: 1rem 2rem;
-  transition: all 0.3s ease;
-}
 
-.navbar-brand img {
-  width: 40px;
-  height: auto;
+.banner{
+  background-image: url(/Company-Profile-main/assets/images/Galeri/gambarawal.jpg);
+  background-size: cover;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  color: #F3F0E5;
 }
-
-.nav-link {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  color: #6c757d; /* Gray color for text */
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #343a40; /* Darker gray color on hover */
-}
-
-.navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2860, 60, 60, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-/* Fixed Navbar on Scroll */
-.navbar.fixed-top {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 
 /* about */
 .custom-header {
@@ -75,6 +53,10 @@ body {
   margin-left: auto;
 }
 
+#about {
+  background-image: linear-gradient(#D9D9D9 5%, #F2EFE5 95%);
+}
+
 /* Responsive styles */
 @media (min-width: 576px) {
   .container {
@@ -101,8 +83,8 @@ body {
 }
 
 /* Service */
-#servise{
-  background-color: var(--primary-color);
+#services{
+  background-image: linear-gradient(#F2EFE5 5%, #D9D9D9 95%);
 }
 #services .card {
   transition: transform 0.3s;
@@ -115,9 +97,34 @@ body {
 /* gallery dari sini */
 .grid {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
+
+.grid > div {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
 .grid > .item1 {
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -151,6 +158,7 @@ body {
 /* Testimoni */
 
 .testimoni{
+  background-image: linear-gradient(#D9D9D9 5%, #F2EFE5 95%);
   padding: 80px 0px;
   min-height: 80vh;
   border-radius: 10px;
@@ -216,43 +224,16 @@ body {
 
 /* Testimoni selesai */
 
+#contact {
+  background-image: linear-gradient(#F2EFE5 5%, #D9D9D9 95%);
+}
+
 /* Footer */
 
-*{
-    padding: 0;
-    margin: 0;
-}
-
-html {
-    background-color: #ffffff;
-}
-
-body{
-    font: 16px/1.6 arial, sans-serif;
-}
-
-header {
-    text-align: center;
-    padding-top: 100px;
-    margin-bottom: 190px;
-}
-
-header h1 {
-    font: normal 32px/1.5 'Open Sans', sans-serif;
-    color: #00922c;
-    padding-top: 16px;
-}
-
-header h2 {
-    color: #000000;
-    font-size: 30px;
-}
-
 .footer {
-  background-color: #ffffff; /* White background */
+  background-image: linear-gradient(#D9D9D9 5%, #F2EFE5 95%);
   color: #6c757d; /* Bootstrap text-muted color */
   padding: 2rem 0;
-  margin-top: 2rem;
 }
 
 .footer h3 {
@@ -298,3 +279,4 @@ header h2 {
   }
 }
 
+/* Footer Selesai */
